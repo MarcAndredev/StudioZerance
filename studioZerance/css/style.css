@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    padding-top: 20px;
+    margin: 0 80px;
+
+}
+
+.row {
+    display: flex;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+.justify-center{
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+
+}
+
+nav ul {
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 20px 0 20px 100px;
+}
+
+nav ul li a {
+    color: black;
+    font-family: 'karla';
+    font-weight: bold;
+    font-size: 16px;
+}
+nav ul li a:hover{
+    text-decoration: underline 3px solid #FFD31E;
+   
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.mv-20 {
+    margin: 20px;
+}
+
+.mv-40 {
+    margin: 40px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.mh-80 {
+    margin: 0 80px;
+}
+
+.px-32 {
+    font-size: 32px;
+}
+
+.px-24 {
+    font-size: 24px;
+}
+
+.px-16 {
+    font-size: 16px;
+}
+
+.futura {
+    font-family: 'Futura Maxi CG';
+}
+
+.karla {
+    font-family: "karla";
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* section banniere */
+
+.banniere {
+
+    position: relative;
+    top: -12vh;
+    left: 50%;
+    transform: translate(-50%, -180%);
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: lighter;
+
+}
+
+/* section portfolio */
+
+.portfolio {
+    background-color: black;
+    padding: 100px 180px;
+
+}
+
+.portfolio a {
+    margin: 50px 0;
+
+
+}
+
+.portfolio a img {
+
+    width: 200px;
+
+
+}
+
+/* section slider */
+
+.slider img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.btn-next {
+    background: url("../images/arrow_right.png") no-repeat;
+    position: relative;
+
+    height: 45px;
+    width: 30px;
+    top: 50vh;
+    left: 80%;
+    cursor: pointer;
+    z-index: 10;
+
+}
+
+.active {
+    
+    opacity: 1 !important;
+    width: 90%;
+}
+
+.card {
+    position: relative;
+    width: 500px;
+    z-index: 12;
+    text-align: center;
+    background-color: white;
+    padding: 20px 40px 40px 40px;
+    left: 60%;
+    top: 35vh;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.card img {
+    height: 80px;
+}
+
+.card article {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 30px;
+}
+
+.btn {
+    color: black;
+}
+
+.btn:hover {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline 8px;
+    text-decoration-color: #FFD31E;
+}
+
+/* section bandeau */
+
+.bandeau {
+    position: relative;
+    width: 100%;
+    top: 100vh;
+    padding: 20px 0;
+    background-color: #FFD31E;
+    text-align: center;
+
+
+}
+
+.bandeau p {
+    display: inline-block;
+    padding-right: 30px;
+    color: white;
+    overflow-x: hidden;
+    animation: defilement 10s infinite linear;
+}
+
+@keyframes defilement {
+    0% {
+        transform: translate(100%, 0);
+    }
+
+    100% {
+        transform: translate(-120%, 0);
+    }
+}
+
+/* popup */
+
+.overlay {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+}
+
+.popup {
+    margin: 20% auto;
+    width: 70%;
+    height: 40%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 150;
+}
+.btnClose {
+    background-image: url("../images/croix.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    float: right;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    z-index: 20;
+    display: none;
+    }
+
+form{
+    text-align: center;
+    
+}   
+
+label{
+    margin-bottom: 20px;
+    display: block;
+}
+/* menu burger */
+
+.menu_burger{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    text-align: center;
+    display: none;
+    top: 0;
+    left: 0;
+}
+#menu-burger ul{
+    padding-top: 10%; 
+}
+#menu-burger ul li{
+    margin: 20px 0;
+    padding-bottom: 5%;
+    
+
+}
+#menu-burger ul li a{
+
+    font-size: 32px;
+  
+}
+.column{
+    flex-direction: column;
+}
+.picto_burger{
+    background-image: url("../images/burger.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    height: 80px;
+    width: 50px;
+    z-index: 25;
+    display: none;
+} 
+@media (max-width: 1500px){
+    .portfolio a img {
+        width: 150px;
+    }
+    .btn-next{
+        left: 86%;
+        top: 45vh;
+    }
+}
+
+@media (max-width: 1200px){
+    header{
+        margin: 10px 80px;
+    }
+    .nav_xl{
+        display: none;
+    }
+    .picto_burger{
+        display: block;
+    }
+    .menu_burger{
+        display: none;
+    }
+    nav{
+        height: 100vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    nav ul {
+        height: 100%;
+    }
+    nav ul li {
+        margin: 60px 0;
+    }
+    nav ul li a{
+        font-size: 32px;
+        color: white;
+        
+      
+    }
+    .portfolio a img{
+        width: 100px;
+        
+    }
+    .card{
+        top: 15vh;
+    }
+    .btn-next{
+        left: 86%;
+        top: 35vh;
+    }
+    .bandeau{
+        top: 66vh;
+    }
+}
+@media (max-width: 1000px){
+    h1 {
+        font-size: 32px;
+    }
+    .banniere{
+        top: -20vh;
+    }
+}
+@media (max-width: 480px){
+  
+    .slider{
+        display: none;
+    }
+    header{
+        margin: 0 20px;
+    }
+    .bandeau p{
+        
+        font-size: 16px;
+        
+    }
+    .card{
+        left: 50%;
+        
+    }
+    .portfolio{
+        padding: 40px 0;
+        
+        
+    }
+    .portfolio div{
+        flex-direction: column; 
+        text-align: center;
+    }
+    .portfolio a img{
+        width: 150px;
+        
+    }
+    .name_agence{
+        display: none;
+    }
+    .logo{
+        height: 50vh;
+    }
+    h1{
+       font-size: 18px;
+    }
+    .card{
+        top: 17vh;
+    }
+    .bandeau{
+        top: 60vh;
+    }
+}
